@@ -27,9 +27,68 @@
 <header class="navbar">
     <h1>Title</h1>
     <nav class="navbar-right">
-    <a href="#section1">menu item 1</a>
-    <a href="#section2">menu item 2</a>
-    <a href="#section3">menu item 3</a>
+        <div class="dropdown">
+            <button class="dropbtn">Protein powder 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Protein powder: Vanilla</a>
+                <a href="#">Protein powder: Chocolate</a>
+                <a href="#">Protein powder: Banana</a>
+                <a href="#">Pre-workout protein powder</a>
+                <a href="#">Vegan protein powder</a>
+                <a href="#">Dairy free protein powder</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Equipment 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Pull up bar</a>
+                <a href="#">Weights</a>
+                <a href="#">Ropes</a>
+                <a href="#">Resistance bands</a>
+                <a href="#">Weight bench</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Training programmes 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div class=sub-dropdown>
+                <button class="sub-dropbtn">Trainer 1 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="sub-dropdown-content">
+                    <a href="#">1 month</a>
+                    <a href="#">3 months</a>
+                    <a href="#">6 months +</a>
+                </div>
+              </div>
+              <div class=sub-dropdown>
+                <button class="sub-dropbtn">Trainer 2 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="sub-dropdown-content">
+                    <a href="#">1 month</a>
+                    <a href="#">3 months</a>
+                    <a href="#">6 months +</a>
+                </div>
+              </div>
+              <div class=sub-dropdown>
+                <button class="sub-dropbtn">Trainer 3 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="sub-dropdown-content">
+                    <a href="#">1 month</a>
+                    <a href="#">3 months</a>
+                    <a href="#">6 months +</a>
+                </div>
+              </div>
+            </div>
+        </div>
     </nav>
 </header>
 
@@ -44,6 +103,8 @@
 
 <br>
 
+
+
 <!-- SECTION 2 -->
 
 <section>
@@ -55,8 +116,26 @@
 
 <!-- SECTION 3 -->
 
+<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
 
+<script type="text/javascript">
+    window.onload = function() {
+    L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
+
+    var map = L.mapquest.map('map', {
+        center: [52.399919, -1.276446],
+        layers: L.mapquest.tileLayer('map'),
+        zoom: 5
+    });
+
+    L.mapquest.directions().route({
+        start: '26 Kersley Road, London, N16 0NP, UK',
+        end: '163 Acomb Street, Manchester, M14 6YY, UK'
+    });
+    }
+</script>
+
+<div id="map" style="width: 100%; height: 530px;"></div>
 
 <!-- FOOTER -->
-Joe was here!
-Asel conflict test

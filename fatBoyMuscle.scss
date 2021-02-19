@@ -58,32 +58,109 @@ form.search-bar button {
 
 /* NAVBAR */
 
+%navbar {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
 .navbar {
     background-color: #333;
     overflow: hidden;
 
     h1 {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+        @extend %navbar;
     }
 
     a {
-        float: left;
-        color: #f2f2f2;
-        margin-top: 40px;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 20px;
+        @extend %navbar;
+        margin-top: 0px;
+        font-size: 16px;
     }
 
 }
 
 .navbar-right {
     float: right;
+}
+
+.dropdown, .dropdown-content {
+    float: left;
+    overflow: hidden;
+  }
+
+%dropbtn {  
+    font-size: 16px;  
+    outline: none;
+    padding: 14px 16px;
+    margin: 0;
+    border: none;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.dropdown .dropbtn {
+    @extend %dropbtn;
+    color: white;
+}
+
+.sub-dropdown .sub-dropbtn {
+    @extend %dropbtn;
+    color: black;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content, .sub-dropdown-content {
+    float: right;
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+%dropdown-content-a {
+    font-size: 16px;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a {
+    @extend %dropdown-content-a
+}
+
+.sub-dropdown-content a {
+    @extend %dropdown-content-a
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content .sub-dropbtn:hover {
+    background-color: #ddd;
+}
+
+.sub-dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+    display: inline-block;
 }
 
 
