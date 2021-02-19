@@ -4,6 +4,19 @@
 
 <head>
     <link rel="stylesheet" href="fatBoyMuscle.css">
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+    <script type="text/javascript">
+        window.onload = function() {
+            L.mapquest.key = "LH8xDJIX1JDD9jXigrKETCmPyNc1etI7";
+    
+            var map = L.mapquest.map("map", {
+                center: [51.504831314, -0.123499506],
+                layers: L.mapquest.tileLayer("map"),
+                zoom: 13
+            });   
+        }
+    </script>
 </head>
 
 
@@ -25,7 +38,7 @@
 <!-- NAVBAR -->
 
 <header class="navbar">
-    <h1>Title</h1>
+    <h1>FATBOY MUSCLE</h1>
     <nav class="navbar-right">
         <div class="dropdown">
             <button class="dropbtn">Protein powder 
@@ -95,12 +108,62 @@
 <br>
 
 <!-- SECTION 1 -->
+<div class="slideshow-container">
 
-<div id = "img-div">
-    <img id = "image" src = "https://cdn.wallpapersafari.com/53/72/cMIO9o.jpg" alt = "Placeholder wallpaper">
-    </img>
-</div>
+	<div class="mySlides fade">
+	  
+	  <img src="https://www.desktopbackground.org/download/2560x1440/2012/06/07/402034_gym-wallpapers-hd-download_2716x1810_h.jpg" style="width:100%">
+	  <div class="text">Our facilities</div>
+	</div>
+	
+	<div class="mySlides fade">
+	  
+	  <img src="https://e3.365dm.com/20/10/2048x1152/skynews-gym-gyms-exercise-workout_5145632.jpg" style="width:100%">
+	  <div class="text">Our Motto</div>
+	</div>
+	
+	<div class="mySlides fade">
+	  
+	  <img src="https://c.files.bbci.co.uk/3250/production/_114908821_gyms201.jpg" style="width:100%">
+	  <div class="text">Our Staff</div>
+	</div>
+	
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	
+	</div>
+	<br>
+	
 
+	
+	<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+	
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+	
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+	
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
 <br>
 
 
@@ -108,7 +171,7 @@
 <!-- SECTION 2 -->
 
 <section>
-    <h2>Intro copy title</h2><br>
+    <h2>Welcome to Fatboy Muscle</h2><br>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </section>
 
@@ -116,6 +179,7 @@
 
 <!-- SECTION 3 -->
 
+<<<<<<< HEAD
 <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
 <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
 
@@ -139,3 +203,87 @@
 <div id="map" style="width: 100%; height: 530px;"></div>
 
 <!-- FOOTER -->
+=======
+<hr>
+<br/>
+
+<h2>Our best selling products</h2>
+
+<br/>
+
+<div class="flex-container">
+    <div class="flex-box" style="background-color: #a3586d;">
+        <h3>Protein powder: Brand X Vanilla Flavoured</h3>
+        <img src="https://images.hollandandbarrettimages.co.uk/productimages/HB/724/024965_A.jpg" alt="Vanilla protein powder">
+        <p>£19.99</p>
+    </div>
+    <div class="flex-box" style="background-color: #f3b05a;">
+        <h3>Equipment: Brand Y Pull-up Bar</h3>
+        <img src="https://media.4rgos.it/i/Argos/6180223_R_Z001A?w=750&h=440&qlt=70" alt="Pull-up bar">
+        <p>£29.99</p>
+    </div>
+    <div class="flex-box" style="background-color: #5c4a72;">
+        <h3>Training programme: 10 sessions with our friendliest personal trainer</h3>
+        <img src="https://www.elitefts.com/wp/wp-content/uploads/2011/11/trainer-personal-yelling-megaphone.jpg" alt="Personal trainer">
+        <p>£499.99</p>
+    </div>
+</div>
+
+<br/>
+
+<!-- SECTION 4 -->
+
+<hr>
+<br/>
+
+<h2>Find us here</h2>
+<br/>
+<div id="map" style="width: 100%; height: 530px"></div>
+
+<!-- FOOTER -->
+
+<br/>
+
+<footer style="justify-content: right;">
+
+    <div class="flex-container">
+        <div class="flex-box__footer">
+            <h3>External Links</h3>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/k-sheikh/" target="_blank">K.S.</a></li>
+                <li><a href="https://www.linkedin.com/in/aselperera/" target="_blank">A.P.</a></li>
+                <li><a href="https://www.linkedin.com/in/josephgraysimmons/" target="_blank">J.S.</a></li>
+            </ul>
+        </div>
+        <div class="flex-box__footer">
+            <h3>Contact Us</h3>
+
+            <form action="/form_acknowledgement" method="POST">
+
+                <label for="name-field">Name</label>
+                <input type="text" id="name-field" name="your-name" required="true"></input>
+                <br/>
+
+                <label for="email-field">Email</label>
+                <input type="email" id="email-field" name="your-email" required="true"></input>
+                <br/>
+
+                <label for="gym-level-field">Gym Level</label>
+                <select id="gym-level-field" name="your-gym-level">
+                    <option></option>
+                    <option>Noob</option>
+                    <option>Intermediate</option>
+                    <option>Certified GymShark</option>
+                </select>
+                <br/>
+
+                <label for="message-field">Message</label>
+                <textarea id="message-field" name="your-message" style="height:50px"></textarea>
+                <br/>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</footer>
+>>>>>>> cfe1ae84d569bb5f622fa35f9c7893b666187768
