@@ -102,6 +102,43 @@ form.search-bar button {
 
 /*/ SECTION 3 /*/
 
+.flex-container {
+    display:flex;
+    justify-content: space-between;
+}
 
+.flex-box{
+
+    width: 27%;
+    padding: 20px;
+    //border: 1px black solid;
+    justify-content: center;
+    text-align: center;
+
+    img {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
 
 /*/ FOOTER /*/
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+
+    a {
+        color: white;
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+}
+
+.flex-box__footer{
+    width: 45%;
+}

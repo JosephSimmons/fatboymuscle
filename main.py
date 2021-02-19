@@ -8,5 +8,6 @@ def index():
 
 @app.route('/form_acknowledgement', methods=['POST'])
 def acknowledge():
+    name = request.form['your-name']
     email = request.form['your-email']
-    return "Thank you for your message. Your email address is: " + email
+    return "Hi " + name + ", thank you for your message. We will respond to you as soon as possible at: " + email + "."
